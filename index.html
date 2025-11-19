@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SbefBOTV2 - Tural Alıyev</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&family=Audiowide&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Outfit', sans-serif;
+        background-color: #020408;
+        color: #ffffff;
+        overflow: hidden;
+      }
+      
+      .font-cyber {
+        font-family: 'Audiowide', cursive;
+      }
+      
+      .font-mono {
+        font-family: 'Fira Code', monospace;
+      }
+      
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1); 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(34, 211, 238, 0.3); 
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(34, 211, 238, 0.6); 
+      }
+
+      /* Animations */
+      @keyframes float {
+        0% { transform: translate(0px, 0px) scale(1); }
+        33% { transform: translate(30px, -50px) scale(1.1); }
+        66% { transform: translate(-20px, 20px) scale(0.9); }
+        100% { transform: translate(0px, 0px) scale(1); }
+      }
+
+      .animate-float { animation: float 15s infinite ease-in-out; }
+      .animate-float-delayed { animation: float 18s infinite ease-in-out 5s; }
+
+      @keyframes slide-up {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      .animate-slide-up { animation: slide-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+      /* Matrix Falling Code Animation */
+      @keyframes matrix-fall {
+        0% { transform: translateY(-100%); }
+        100% { transform: translateY(100%); }
+      }
+      
+      .animate-matrix {
+        animation: matrix-fall 10s linear infinite;
+      }
+
+      .glass-panel {
+        background: rgba(10, 15, 30, 0.6);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      }
+
+      .typing-dot {
+        animation: typing 1.4s infinite ease-in-out both;
+      }
+      .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+      .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+      
+      @keyframes typing {
+        0%, 80%, 100% { transform: scale(0); }
+        40% { transform: scale(1); }
+      }
+
+      /* Memory Text Typing Effect */
+      .typing-effect {
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing-text 2s steps(40, end);
+      }
+      
+      @keyframes typing-text {
+        from { width: 0; opacity: 0; }
+        to { width: 100%; opacity: 1; }
+      }
+
+      /* Code Block Styling */
+      pre {
+        background-color: #0d1117;
+        border-radius: 0.75rem;
+        padding: 1.25rem;
+        overflow-x: auto;
+        margin: 0.75rem 0;
+        border: 1px solid rgba(56, 189, 248, 0.1);
+        position: relative;
+      }
+      code {
+        font-family: 'Fira Code', monospace;
+        font-size: 0.9em;
+        color: #e2e8f0;
+      }
+      p code {
+        background-color: rgba(56, 189, 248, 0.1);
+        color: #38bdf8;
+        padding: 0.2rem 0.4rem;
+        border-radius: 0.375rem;
+      }
+      
+      /* Neon Glow Text */
+      .text-glow {
+        text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-markdown": "https://esm.sh/react-markdown@9"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

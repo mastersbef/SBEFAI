@@ -1,0 +1,7 @@
+{
+  "name": "SbefBOTV2",
+  "description": "The next generation AI chatbot specialized in Azerbaijani language created by Tural Alıyev.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
